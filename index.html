@@ -49,19 +49,22 @@
         </section>
 
         <!-- Parte degli amici -->
-        <section class="friends">
-            <div class="friend">
-                <img src="img/avatar_1.jpg" alt="Michele">
-                <div class="name">
-                    <span>Michele</span>
-                    <br>
-                    <span class="lastMessage">
-                        <small>Ultimo messaggio inviato</small>
-                    </span>
+        <section class="chat">
+            <div class="friends" v-for="(contact, index) in contacts"
+            :class="activeItems === index ? 'active' : ''">
+                <div class="friend">
+                    <img :src="contact.avatar"  :alt="contact.name">
+                    <div class="name">
+                        <span>{{contact.name}} </span>
+                        <br>
+                        <span class="lastMessage">
+                            <small>Ultimo messaggio inviato</small>
+                        </span>
+                    </div>
                 </div>
-            </div>
-            <div class="time">
-                <span>12:00</span>
+                <div class="time">
+                    <span>12:00</span>
+                </div>
             </div>
         </section>
     
