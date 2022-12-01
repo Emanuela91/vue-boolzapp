@@ -100,6 +100,32 @@ img{
     margin-left: 5px;
 }
 
+/* Sezione amici */
+.friends{
+    display: flex;
+}
+
+.friend{
+    display: flex;  
+    padding: 5px;  
+    border-top: 1px solid #e9ebeb;
+}
+
+.name{
+    font-size: 13px;
+    margin-left: 10px;    
+}
+
+.lastMessage{
+    color: #b1b1b1;
+}
+
+.time{
+    font-size: 10px;
+    color: #b1b1b1;
+    padding: 5px;
+    border-top: 1px solid #e9ebeb;
+}
 
 
 
