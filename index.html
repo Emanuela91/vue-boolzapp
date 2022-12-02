@@ -80,7 +80,7 @@
             <div class="friend">
                 <img :src="contacts[activeItems].avatar" alt="Michele">
                 <div class="name">
-                    <span>Michele</span>
+                    <span>{{contacts[activeItems].name}} </span>
                     <br>
                     <span class="lastMessage">
                         <small>Ultimo accesso oggi alle ore 12:00</small>
@@ -108,7 +108,7 @@
         <!-- Parte in cui si scrivono i messaggi -->
         <footer class="writeMessage">
             <i class="fa-regular fa-face-smile fa-fw"></i>
-            <input type="text" placeholder="Scrivi un messaggio">
+            <input type="text" placeholder="Scrivi un messaggio" @KeyUp.enter="add" v-model="newMessage">
             <i class="fa-solid fa-microphone fa-fw"></i>
         </footer>
     </section>
