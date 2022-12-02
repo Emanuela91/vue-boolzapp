@@ -175,21 +175,37 @@ createApp({
     methods:{
         clickChat(index){
             this.activeItems = index;
+        },
+        
+        
+        // aggiungo un messaggio alla chat
+        add(){
+            this.contacts[this.activeItems].messages.push(
+                {
+                    date: '10/01/2020 18:22:00',
+                    message: this.newMessage,
+                    status: 'sent'
+                }
+                
+            );
+            
+            setTimeout(this.answerUser, 1000);
+        },
+    
+        // aggiungo messaggio di risposta
+        answerUser(){
+            this.contacts[this.activeItems].messages.push(
+                {
+                    date: '10/01/2020 18:22:00',
+                    message: 'okok',
+                    status: 'received'
+                }
+            )
         }
+        
+        
+            
     },
-
-
-    // aggiungo un messaggio alla chat
-    add(){
-        this.contacts[this.activeItems].messages.push(
-            {
-                date: '10/01/2020 18:22:00',
-                message: this.newMessage,
-                status: 'sent'
-            }
-
-        );
-    }
 
 }).mount('#myapp') 
     
