@@ -97,11 +97,9 @@
 
         <!-- Parte centrale con messaggi -->
         <main>
-            <div class="sent">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi placeat, eligendi eaque mollitia tenetur fugit dolore beatae nisi nesciunt? Ducimus, soluta.
-            </div>
-            <div class="userSent">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati officiis eum delectus tenetur maxime.
+            <div v-for="message in contacts[activeItems].messages"
+            :class="message.status === 'sent' ? 'green' : 'white' ">
+                {{message.message}}
             </div>
 
         </main>

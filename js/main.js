@@ -167,16 +167,14 @@ createApp({
                         }
                     ],
                 }
-            ]
-          
-            
-            
+            ]   
         }
     },
 
+    // al click cambio chat
     methods:{
-        clickChat(){
-            this.activeItems = index
+        clickChat(index){
+            this.activeItems = index;
         }
     }
 
