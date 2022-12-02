@@ -3,6 +3,7 @@ const {createApp} = Vue;
 createApp({
     data() {
         return {
+            newMessage: '',
             activeItems: 0,
             contacts: [
                 {
@@ -174,7 +175,9 @@ createApp({
     },
 
     methods:{
-        
+        clickChat(){
+            this.activeItems = index
+        }
     }
 
 }).mount('#myapp') 

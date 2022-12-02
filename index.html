@@ -51,14 +51,15 @@
         <!-- Parte degli amici -->
         <section class="chat">
             <div class="friends" v-for="(contact, index) in contacts"
-            :class="activeItems === index ? 'active' : ''">
+            :class="activeItems === index ? 'active' : ''"
+            @click="clickChat(index)">
                 <div class="friend">
                     <img :src="contact.avatar"  :alt="contact.name">
                     <div class="name">
                         <span>{{contact.name}} </span>
                         <br>
                         <span class="lastMessage">
-                            <small>Ultimo messaggio inviato</small>
+                            <small>{{contact.messages[contact.messages.length - 1].message}}</small>
                         </span>
                     </div>
                 </div>
@@ -77,7 +78,7 @@
         <!-- Chat attiva  -->
         <header class="user">
             <div class="friend">
-                <img src="img/avatar_1.jpg" alt="Michele">
+                <img :src="contacts[activeItems].avatar" alt="Michele">
                 <div class="name">
                     <span>Michele</span>
                     <br>
