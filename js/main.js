@@ -201,11 +201,21 @@ createApp({
                     status: 'received'
                 }
             )
-        }
+        },
+       
+
+
+    },
         
+    computed: {
+        filteredList() {
+            return this.contacts.filter(contacts => {
+            return contacts.name.toLowerCase().includes(this.search.toLowerCase())
+            })
+        }
+    },
         
             
-    },
 
 }).mount('#myapp') 
     
